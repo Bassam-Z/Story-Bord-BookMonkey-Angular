@@ -1,0 +1,32 @@
+.style {
+    margin-right: 300px;
+    margin-left: 300px;
+}
+
+.mar {
+    margin: 20px;
+}
+
+.pfeil {
+    margin: 10px;
+}
+
+.next {
+    color: rgb(255, 224, 45);
+    margin-left: 22%;
+    float: left;
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.vorhegend {
+    color: rgb(2, 216, 48);
+    margin-right: 22%;
+    float: right;
+    font-size: 60px;
+    font-weight: 900;
+}
+.nichtweiterrot {
+  color: red;
+  text-align: center;
+}

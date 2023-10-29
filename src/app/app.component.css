@@ -1,0 +1,10 @@
+.ufooter {
+    position: fixed;
+    bottom: 0px;
+    margin-top: auto;
+    left: 0px;
+    right: 0;
+    /* color: white; */
+    border-width: 1px;
+    /* border-style: solid; */
+}

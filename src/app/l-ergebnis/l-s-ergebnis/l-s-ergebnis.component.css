@@ -1,0 +1,12 @@
+.style {
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+.style1 {
+    margin: 15px;
+    float: right;
+    text-align: left;
+    font-size: 28px;
+    font-weight: 800;
+}

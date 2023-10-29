@@ -1,0 +1,83 @@
+<div *ngIf="falscheantwort < 4">
+    <div class="ui segment style">
+        <p style="text-align: center">Fill in Fragen Prüfmodus Voll-Prüfung!!</p>
+        <div style="text-align: left; font-weight: bold" class="ui message">
+            FrageNr:{{ fifrage.fifnr }}
+            <br />
+            <br />
+            <p style="text-align: center; font-size: 18px">{{ fifrage.fifstext }}</p>
+
+            <div class="ui clearing divider"></div>
+            <div class="ui message">
+                <div *ngIf="!keyinput">
+                    <div class="feld">
+                        <input type="text" #meininput (keyup.enter)="checkInput(meininput.value); meininput.value = ''" />
+                    </div>
+                </div>
+                <div *ngIf="keyinput">
+                    <div class="feld">
+                        <input type="text" #meininput (keyup.enter)="checkInput(meininput.value); meininput.value = ''" />
+                    </div>
+                </div>
+                <br />
+                <div *ngIf="antwortenzeigen" class="firichtig">
+                    <div *ngFor="let c of fifrage.fifantworten" style="text-align: center">
+                        {{ c.antworttext }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="next pfeil">
+        <i class="arrow left icon" (click)="vorhegendeFrage()"><p style="font-size: 18px; margin: 15px">Vorhegende</p></i
+    >
+  </div>
+
+  <div class="vorhegend pfeil">
+    <i class="arrow right icon" (click)="naechteFrage()"
+      ><p class="arrow right icon" style="font-size: 18px; margin: 15px">
+        Nächste
+      </p>
+    </i>
+    </div>
+    <br />
+    <div class="ui center aligned basic segment">
+        <button class="ui teal button" (click)="zurucksetzen()">Leeren</button>
+        <div style="margin: 10px" class="One massive ui inverted red buttons">
+            <div class="item" class="massive ui inverted">
+                <button class="ui inverted red button" (click)="goToergibns()">
+          Prüfung beenden
+        </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="falscheantwort >= 4">
+    <div class="ui segment style">
+        <div class="style1">
+            <div style="color: seagreen">
+                Die richtige Antworten :{{ rictigeantwort }}
+            </div>
+            <br />
+            <div style="color: rgb(139, 46, 46)">
+                Die falsche Antworten :{{ 10 - rictigeantwort }}
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <div style="color: seagreen">{{ bestand }}</div>
+            <div style="color: rgb(255, 0, 0)">{{ Nbestand }}</div>
+            <br>
+            <p>Wir empfehlen Sie beim Lernmudes zu mehr zu Üben</p>
+    <button class="ui inverted red button" (click)="goTolernmudus()">
+      Zu Lernmudes
+    </button>
+        </div>
+        <div class="ui vertical rectangle test ad" data-text="Multiple-Choice Voll-Prüfung Ergibns"></div>
+    </div>
+</div>

@@ -1,0 +1,204 @@
+<div class="ui center aligned basic segment">
+    <br />
+    <br />
+    <img src="favicon.ico" width="200px" />
+    <br />
+    <br />
+    <br /><br />
+    <br />
+    <p style="font-size: 24px">INFO <br> <br>
+      August - Oktober 2021<br>
+      <br>
+      BITLC GmbH - Klasse Do8 - Angular Modul:<br>
+          Projekt LPS - Lern-Prüf-Simulator als Angular App <br>
+          <br>
+          Aufgabenstellung<br>
+          <br>
+          Zur Festigung des, mit der Umsetzung der App "BookMonkey", erworbenen Wissens, soll eine App
+          programmiert werden, mit der es möglich ist, sich auf Zertifizierungsprüfungen vorzubereiten.
+          Diese App soll dem “lpisim“ ähneln, der als Simulator zur Vorbereitung auf LPIC Zertifizierungen
+          des LPI Institutes bei der BITLC GmbH eingesetzt wird. Speziell soll diese App einen Lernmodus
+          erhalten, der es ermöglicht sich genauer mit den Fragen und Antworten auseinander zu setzten,
+          bevor ausschließliche Prüfungsszenarien durchgespielt werden.<br>
+          <br>
+          Name der App: LPS -- Lern-Prüf-Simulator<br>
+          <br>
+          Da das vollständige Erstellen des LPS ähnlich dem „lpisim“ mit Lernmodus (wir geben damit nur
+          das ‚ferne‘ Ziel an), nicht in der zur Verfügung stehen Zeit zu schaffen ist, werden hier
+          Teilabschnitte der LPS App angegeben, die man einzeln angehen kann.
+          Diese schrittweise Entwicklung einzelner Komponenten ermöglicht es, sich nicht zu überfordern
+          und alles auf einmal machen zu wollen. Sind die ersten Teilabschnitte entwickelt, hat man eher die
+          Möglichkeit abzuschätzen, welche weiteren Teilabschnitte in der gegebenen Zeit noch entwickelt
+          werden können oder auch nicht.<br>
+          <br>
+          <br>
+          A. Fragen verarbeiten:
+          <br>
+          1. Einzelne Fragentypen verarbeiten (je Fragentyp ca. 20 Fragen)
+          a. Die App sollte in der Lage sein zunächst nur Multiple-Choice-Fragen zu verarbeiten.
+          b. Eine Erweiterung soll es später ermöglichen nur Single-Choice-Fragen zu verarbeiten.
+          c. Eine weitere Erweiterung soll dann das Verarbeiten von nur Fill-In-Fragen ermöglichen.
+          2. Alle Fragentypen (A.1: a,b,c) in einem Fragenmodul zusammen verarbeiten.<br>
+          <br>
+          Es ist zulässig zunächst nur A.1.a. sich vorzunehmen und anschließen B., also den
+          Lernmodus & Prüfungsmodus für A.1.a zu implementieren und später dann andere
+          Fragentypen mit zu integrieren.<br>
+          <br>
+          <br>
+          B. Lernmodus / Prüfmodus:<br>
+          <br>
+          Die App sollte dabei sowohl die Möglichkeit zum reinen Lernen des Stoffs, das den Lernmodus
+          darstellt, und den sonst üblichen Prüfmodus anbieten, um eine Überprüfung des bereits
+          erworbenen Wissens durchzuführen.<br>
+          <br>
+          Lernmodus & Prüfmodus sollte den Nutzer dazu erziehen, den Stoff zunächst intensiv zu lernen
+          mit dem Lernmodus und erst dann sein Wissen durch nutzen des Prüfmodus zu überprüfen
+          (siehe Beschreibung in Abschnitt Hintergrund).<br>
+          <br>
+          Auch hier gilt, wie zuvor schon gesagt, sich hier nur einen Teilabschnitt, vorzugsweise
+          den Lernmodus in Verbindung mit A.1.a., vorzunehmen. Anschließend könnte dann dazu
+          der Prüfmodus entwickelt werden (der Prüfmodus soll zwei Modi aufweisen - siehe
+          Beschreibung in Abschnitt Hintergrund).<br>
+          <br>
+          <br>
+          C. Erweiterte Fragentypen:<br>
+          <br>
+          Anderen Fragentypen, die in Zertifizierung-Prüfungen vorkommen können, sollen ermittelt
+          und lediglich in der Dokumentation mit vorgestellt werden – Abschnitt Erweiterungen.
+          Dabei soll überlegt werden, wie eine eventuelle Integration in die LPS App erfolgen kann.<br>
+          <br>
+          <br>
+          Hintergrund<br>
+          <br>
+          Mit diesem Projekt soll zunächst eine browserbasierte App, für den Kunden, die Abraxasy GmbH,
+          geschaffen werden. Sie soll von Teilnehmern einer Ausbildung zum Fachinformatiker
+          (FIAE & FISI) genutzt werden können, um sich auf internationale Zertifizierungsprüfungen
+          vorzubereiten (zunächst nur für Prüfungen des Linux Professional Institut - LPI).<br>
+          <br>
+          Als Benutzer der App kommen aber auch Personen in Frage, die sich allgemein auf
+          Zertifizierungsprüfungen (hier LPIC) vorbereiten wollen, egal, ob sie dies in einem schulischen Umfeld,
+          am Arbeitsplatz oder rein privat machen wollen. Die Abraxasy GmbH will später die App freigeben.
+          Bei normalen Prüfungssimulatoren besteht in der Regel keine Möglichkeit den Stoff zunächst zu
+          lernen, man kann nur direkt in Prüfungssimulationen einsteigen.
+          Dadurch besteht die Gefahr, dass sich beim Beantworten von Fragen, wenn man ins Raten kommt
+          - und die Erfahrung lehrt, das es viele tun - sich „geratenes“ = “falsches“ Wissen verfestigt.
+          <br>
+          Dies führt, unter Stress, in den echten Prüfungen, wenn man nur raten gewöhnt ist, zu großer
+          Unsicherheit und damit oft zu schlechten Ergebnissen mit weiterhin unsicherem Wissen.
+          Daher soll die App die Möglichkeit bieten, sich die korrekten Antworten zunächst auch nur
+          anzeigen zu lassen, ohne vorher selbst eine Antwort auswählen zu müssen.
+          <br>
+          Dies soll der Lernmodus sein – mit der wichtigste Teil der App.<br>
+          <br>
+          <br>
+          Im Prüfungsmodus sollen 2 Modi vorhanden sein:<br>
+          <br>
+          einen Teil-Prüfungsmodus und ein Voll-Prüfungsmodus.<br>
+          <br>
+          Der Teil-Prüfungsmodus soll bei jeder falscher Beantwortung einer Frage ein negatives Feedback
+          geben, um den Anwender noch mehr zu motivieren, den Stoff vorher intensiv zu lernen, ehe Fragen
+          nur unsicher beantwortet werden.<br>
+          <br>
+          Negatives Feedback können 1 oder 2 weitere Button Clicks sein oder das Zurückwerfen auf die
+          erste Frage (was sehr krass ist) oder zurückwerfen auf die aktuelle Frage bis diese richtig ist.
+          Der Voll-Prüfungsmodus soll erst nach Beantwortung aller Fragen ein Ergebnis anzeigen, aber er
+          soll abgebrochen werden, wenn 7 Fragen falsch beantwortet wurden, da nicht mehr davon
+          ausgegangen werden kann, das der Anwender seinen Stoff beherrscht.<br>
+          <br>
+          Die Empfehlung sollte dann sein, das der Lernmodus lieber benutzt werden sollte.<br>
+          Datenstruktur / Datengrundlage / Datenzugriff
+          <br>
+          Datengrundlage zur App sollen die Fragen , des mit dem „lpisim“ mitgegebenen LPIC-1-FragenKatalog LPI-2019-1-101d-QA, sein.
+          a. Datenstruktur Ermittlung: (sehr wichtig)<br>
+          <br>
+          Ähnlich dem BookMonkey können zunächst wenige Bücher=Fragen (ca. 3) intern der App zur
+          Verfügung gestellt werden, um die Datenstruktur des jeweiligen Fragentyps zu entwickeln
+          (siehe A.: Single Choice, Multiple Choice, Fill In).<br>
+          <br>
+          <br>
+          b. Datenzugriff:<br>
+          <br>
+          1. Im nächsten Schritt soll dann ein Fragenkatalog mit vielen Fragen (pro Fragentyp
+          mindestens 20 Fragen) in ein passendes Format umgewandelt werden und der Einfachheit
+          halber, in der App selbst gespeichert werden, ähnlich „book-store-service“ oder über das
+          HTTP „in Memory“ Verfahren (siehe TourOfHeroes) per HTTPClient „geladen“ werden.
+          <br>
+          <br>
+          2. Datenzugriff (optional):<br>
+          <br>
+          alternativ wird der Zugriff auf Fragenkataloge auch per HTTP/HTTPS Zugriff realisiert,
+          wie es im BookMonkey mit dem “api3.angular-buch.com“ auf einen externen DataStore
+          realisiert wurde (schon sehr aufwendig: siehe swagger API).<br>
+          <br>
+          <br>
+          Projektplanung<br>
+          <br>
+          Das Projekt soll nach dem erweiterten Wasserfallmodel entwickelt werden.
+          Das heißt, in der Dokumentation wird nur auf den fertigen Zustand eingegangen, nicht auf evtl.
+          iterative Zwischenschritte wie z.B. Änderung der Datenstruktur, weil diese ergänzt oder ganz
+          verändert werden musste.<br>
+          <br>
+          a. Begonnen werden soll zunächst allerdings mit einem Story-Board, ähnlich dem des
+          BookMonkey, in dem skizzenhaft die Ansichten und damit die Funktionsweise der
+          LPS App gezeigt werden soll (Blatt Papier und Stift; später dann evtl draw.io)<br>
+          <br>
+          b. Eine Grobplanung soll in Form eines Lastenheftes - nur Funktions- und Datenteil, evtl. auch mit
+          einem EPK (eEPK) die Ablaufstruktur, der App wiedergeben werden.
+          Lastenheft dient als Grundlage für Auftragsanfrage!
+          (Lastenheft: Beispiele aus dem Projektmanagement Modul nehmen).<br>
+          <br>
+          c. In der Feinplanung in Form eines Pflichtenheftes – hier wiederrum nur Funktions- und Datenteil
+          soll auf das Lastenheft eingegangen werden.
+          Pflichtenheft ist ein Angebot zum Lastenheft!
+          (Pflichtenheft: Beispiele aus dem Projektmanagement Modul nehmen).
+          Lastenheft und Pflichtenheft können gegenseitig begutachtet werden und sollen, als Auszug, in die
+          Projektdokumentation im Anhang integriert werden.<br>
+          <br>
+          <br>
+          Projektdokumentation:<br>
+          <br>
+          Eigentliche Projektdokumentation: 30 Seiten (fixe Vorgabe)
+          Anhang maximal 15 Seiten enthält auch Story-Board, Lastenheft- und Plichtenheft-Auszüge
+          Projekt Doku + Anhang: maximal 45 Seiten<br>
+          <br>
+          <br>
+          Zeitliche Planung<br>
+          <br>
+          Start: 20.09.2021 – spätester Einstieg 23.08.2020 (nach evtl. weiterer BookMonky Bearbeitung)
+          programmieren der LPS App:
+              (alt: bis incl. 11. Oktober 2021) - neu: bis incl. 18. Oktober 2021<br>
+              <br>
+          Vervollständigung der Doku:
+              (alt: 12. - 15. Oktober 2021) - neu: 19.-22. Oktober 2021<br>
+              <br>
+          Zip-Pakete erstellen und Abgabe:
+              (alt: 15. Oktober bis 14:00 Uhr) - neu: 22. Oktober 2021 12:00-14:00 Uhr<br>
+              <br>
+          Abgabe: (alt: 15 September 2021 : 14:00 Uhr) - neu: bis spätestens 22/10/2021 14:00 Uhr
+          Dokumentation & Source-Code Abgabe in Form einer ZIP oder TAR Datei<br>
+          <br>
+              Info: im Elternverzeichnis des Projektes:
+                    zip -r NachnameVorname-Angular-LPS-$(date +'%Y%m%d%H%M').zip ProjektVerzeichnis --exclude \*/node_modules/\*<br>
+                    <br>
+          Projektdokumentation entweder ins zip integrieren oder extra schicken.<br>
+          <br>
+          <br>
+          Die Abgabe des Projekts umfasst die Projektdokumentation (PDF), sowie den Source Code mit
+          allen wichtigen Daten (Projektverzeichnis), alles in Form eines „zip“ Archives, namentlich in der
+          Form “NamenVornamen-Angular-LPS-20211022HHMM.zip“.<br>
+          <br>
+          Per EMail verschicken:
+            (alt: bis 15 Oktober 2021 14:00 Uhr) - neu: bis 22/10/2021 14:00 Uhr an: antonius.ehlen@bitlc.de<br>
+            <br>
+          Das ‘node_modules‘ Verzeichnis darf nicht enthalten sein.
+          Das ‘node_modules‘ Verzeichnis darf nicht enthalten sein.
+          Das ‘node_modules‘ Verzeichnis darf nicht enthalten sein.<br>
+          <br>
+          ENDE.</p>
+
+          <p style="color: crimson; font-size: 18px;" >Das Projekt wurde vom Entwickler: Bassam Ali entwickelt.</p>
+          <i class="copyright icon"></i>
+          <br>
+          <br>
+          <br>
+</div>

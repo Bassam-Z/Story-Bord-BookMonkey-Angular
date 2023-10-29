@@ -1,0 +1,124 @@
+<div class="ui segment style">
+    <p style="text-align: center">Single-Choice-Fragen Lenmodus!!</p>
+    <div style="text-align: left; font-weight: bold" class="ui message">
+        FrageNr: {{ scfrage.fscnr }} <br />
+        <br />
+
+        <p style="text-align: center; font-size: 18px">{{ scfrage.fscstext }}</p>
+
+        <div class="ui clearing divider"></div>
+
+        <div *ngFor="let antwort of scfrage.fscantworten; index as i">
+            <div *ngIf="!antwort.antworteingabe">
+                <div class="ui radio checkbox sar">
+                    <div class="grouped fields">
+                        <div class="field">
+                            <div class="ui radio checkbox sar">
+                                <input (click)="checkBox(i)" type="radio" name="scfrage.fscnr" />
+                                <label>
+                  <div style="text-align: center">
+                    {{ antwort.antworttext }} {{ antwort.antworteingabe }}
+                  </div></label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="antwort.antworteingabe">
+        <div class="ui radio checkbox sar">
+          <div class="grouped fields">
+            <div class="field">
+              <div class="ui radio checkbox sar">
+                <input
+                  (click)="checkBox(i)"
+                  type="radio"
+                  checked
+                  name="scfrage.fscnr"
+                />
+                <label>
+                  <div style="text-align: center">
+                    {{ antwort.antworttext }} {{ antwort.antworteingabe }}
+                  </div></label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="antwortenzeigen">
+      <div style="text-align: left; font-weight: bold" class="ui message">
+        FrageNr: {{ scfrage.fscnr }} <br />
+        <div *ngFor="let antwort of scfrage.fscantworten">
+          <div *ngIf="!antwort.antworteingabe">
+            <div *ngIf="antwort.antwortrichtig" class="scrichtig">
+              <input input type="radio" name="scfrage.fscnr" disabled />
+              {{ antwort.antworttext }} {{ antwort.antworteingabe }}
+            </div>
+          </div>
+
+          <div *ngIf="antwort.antworteingabe">
+            <div *ngIf="antwort.antwortrichtig" class="scrichtig">
+              <input checked type="radio" name="scfrage.fscnr" disabled />{{
+                antwort.antworttext
+              }}
+              {{ antwort.antworteingabe }}
+            </div>
+          </div>
+
+          <div *ngIf="!antwort.antworteingabe">
+            <div *ngIf="!antwort.antwortrichtig" class="scfalsch">
+              <input input type="radio" name="scfrage.fscnr" disabled />
+              {{ antwort.antworttext }} {{ antwort.antworteingabe }}
+            </div>
+          </div>
+
+          <div *ngIf="antwort.antworteingabe">
+            <div *ngIf="!antwort.antwortrichtig" class="scfalsch">
+              <input checked type="radio" name="scfrage.fscnr" disabled />{{
+                antwort.antworttext
+              }}
+              {{ antwort.antworteingabe }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="next pfeil">
+    <i class="arrow left icon" (click)="vorhegendeFrage()">
+      <p style="font-size: 18px; margin: 15px">Vorhegende</p></i
+    >
+  </div>
+  <div class="vorhegend pfeil">
+    <i
+      class="arrow right icon"
+      class="arrow right icon"
+      (click)="naechteFrage()"
+    >
+      <p style="font-size: 18px; margin: 15px">Nächste</p>
+    </i>
+  </div>
+
+  <br />
+  <div class="ui center aligned basic segment">
+    <button class="ui teal button" (click)="zurucksetzen()">Leeren</button>
+
+    <button class="ui blue button" (click)="antwortAnzeigen()">
+      Antwörten zeigen
+    </button>
+
+    <div style="margin: 10px" class="One massive ui inverted red buttons">
+      <div class="item" class="massive ui inverted">
+        <button class="ui inverted red button" (click)="goToergibns()">
+          Prüfung beenden
+        </button>
+      </div>
+    </div>
+    <button class="ui red button">Falsch</button>
+    <button class="ui green button">Richtig</button>
+  </div>
+</div>

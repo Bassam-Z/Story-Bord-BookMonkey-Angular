@@ -1,0 +1,36 @@
+<div class="ui message" style="margin: 10px">
+    <div style="text-align: center">
+        <div>
+            <img src="favicon.ico" width="200px" />
+            <p class="pr">Prüfung Reglung:</p>
+            <p>Die Fragen bestehen aus 3 Typen.</p>
+            <p class="pr">je Fragentyp ca. 20 Fragen</p>
+            <p class="wll">Willkommen beim Voll-Prüfmodus!</p>
+        </div>
+        <br />
+        <div class="ui section divider deviderSmall"></div>
+        <div class="ui center aligned basic segment">
+            <span class="wahl">1- Multiple-Choice-Fragen</span>
+            <button class="massive ui inverted green button" (click)="goToMCFrage()">
+        <i class="arrow right icon"></i>
+        Wählen
+      </button>
+
+            <br />
+            <br />
+            <span class="wahl">2- Single-Choice-Fragen</span>
+            <button class="massive ui inverted green button" (click)="goToSFrage()">
+        <i class="arrow right icon"></i>
+        Wählen
+      </button>
+
+            <br />
+            <br />
+            <span class="wahl">3- Fill-In-Fragen </span>
+            <button class="massive ui inverted green button" (click)="goToFIFrage()">
+        <i class="arrow right icon"></i>
+        Wählen
+      </button>
+        </div>
+    </div>
+</div>

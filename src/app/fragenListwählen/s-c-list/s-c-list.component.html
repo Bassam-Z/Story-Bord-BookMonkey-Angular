@@ -1,0 +1,44 @@
+<p style="text-align: center; font-size: 24px">S-C-Fragen Liste!!</p>
+
+<div *ngFor="let fr of scfragen" class="ui segment style">
+    <div>FragenNr: {{ fr.fscnr }}</div>
+    <p style="text-align: center" class="ui message">
+        {{ fr.fscstext }}
+    </p>
+    <div *ngIf="lernFNr == fr.fscnr">
+        <div *ngIf="antwortenzeigen">
+            <div *ngFor="let antw of fr.fscantworten">
+                <div class="mar1">
+                    <div *ngIf="antw.antwortrichtig" style="color: green">
+                        <input type="checkbox" name="mcfrage.fmcnr" disabled /> {{ antw.antworttext }}
+                    </div>
+                </div>
+                <div *ngIf="!antw.antwortrichtig" style="color: red">
+                    <input type="checkbox" name="mcfrage.fmcnr" disabled /> {{ antw.antworttext }}
+                </div>
+            </div>
+        </div>
+        <div *ngIf="!antwortenzeigen">
+            <div *ngFor="let antw of fr.fscantworten">
+                <input input type="checkbox" name="mcfrage.fmcnr" disabled /> {{ antw.antworttext }}
+            </div>
+        </div>
+    </div>
+    <div *ngIf="lernFNr != fr.fscnr">
+        <div *ngFor="let antw of fr.fscantworten">
+            <input input type="checkbox" name="mcfrage.fmcnr" disabled /> {{ antw.antworttext }}
+        </div>
+    </div>
+    <div class="ui clearing divider"></div>
+    <div class="ui center aligned basic segment">
+        <span class="mar">
+      <button class="ui blue button" (click)="antwortanzeigen(fr.fscnr)">
+        Antwört zeigen
+      </button>
+      <div class="ui center aligned basic segment">
+        <button class="ui red button">Falsch</button>
+        <button class="ui green button">Richtig</button>
+      </div>
+    </span>
+    </div>
+</div>

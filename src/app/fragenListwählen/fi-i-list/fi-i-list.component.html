@@ -1,0 +1,29 @@
+<p style="text-align: center; font-size: 24px">Fill-in-Fragen Liste!!</p>
+<div *ngFor="let fr of fifragen" class="ui segment style">
+    <div>FragenNr: {{ fr.fifnr }}</div>
+    <p style="text-align: center" class="ui message">
+        {{ fr.fifstext }}
+    </p>
+    <div *ngFor="let antw of fr.fifantworten">
+        <div *ngIf="lernFNr == fr.fifnr">
+            <div *ngIf="antwortenzeigen">
+                <div *ngIf="antw.antwortrichtig" style="color: green">
+                    {{ antw.antworttext }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui clearing divider"></div>
+    <div class="ui center aligned basic segment">
+        <span class="mar">
+      <button class="ui blue button" (click)="antwortAnzeigen(fr.fifnr)">
+        Antwört zeigen
+      </button>
+      <div class="ui center aligned basic segment">
+        <button class="ui red button">Falsch</button>
+        <button class="ui green button">Richtig</button>
+      </div>
+    </span>
+    </div>
+</div>

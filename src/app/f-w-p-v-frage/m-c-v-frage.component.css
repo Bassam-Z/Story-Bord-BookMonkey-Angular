@@ -1,0 +1,24 @@
+.pr {
+    font-size: large;
+    text-decoration: underline;
+    font-style: inherit;
+    font-weight: 500;
+    font-style: unset;
+}
+
+.wahl {
+    margin-left: 22%;
+    float: left;
+    text-align: left;
+    font-size: 28px;
+    font-weight: 800;
+    width: 14em;
+}
+
+.deviderSmall {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.wll{
+  font-size: 24px;
+}

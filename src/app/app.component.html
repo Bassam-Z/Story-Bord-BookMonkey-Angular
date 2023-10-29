@@ -1,0 +1,50 @@
+<div class="ui center aligned basic segment">
+    <div class="ui segment">
+        <div class="item">
+            <p style="font-size: 100px">
+                St<img src="favicon.ico" height="50px" />ry-B<img src="favicon.ico" height="50px" />rd.<i style="font-size: 30px" class="edit icon"></i>
+            </p>
+        </div>
+    </div>
+
+    <div style="margin: 10px" class="One ui inverted secondary buttons">
+        <a routerLink="/home" routerLinkActive="active" class="ui button" (click)="goTowillkommen()">
+            <i class="home icon"></i>Willkommen</a>
+    </div>
+
+    <div style="margin: 10px" class="One ui inverted secondary buttons">
+        <a routerLink="/prufung-lernen" routerLinkActive="active" class="ui button" (click)="goToPrufungLernen()"><i class="stack exchange icon"></i>Prüfung-Lernen</a
+    >
+  </div>
+
+  <div style="margin: 10px" class="One ui inverted secondary buttons">
+    <a
+      routerLink="/fragelist"
+      routerLinkActive="active"
+      class="ui button"
+      (click)="goToFragelist()"
+    >
+      <i class="list alternate icon"></i>Fragenlist
+    </a>
+    </div>
+    <div style="margin: 10px" class="One ui inverted secondary buttons">
+        <a routerLink="/info" routerLinkActive="active" class="ui button" (click)="goToInfo()">
+            <i class="question circle icon"></i>Info
+        </a>
+    </div>
+    <br />
+    <br />
+    <br />
+</div>
+
+<router-outlet></router-outlet>
+<br />
+<br />
+<footer class="ufooter">
+    <div class="ui center aligned basic segment">
+        <div class="ui inverted vertical ufooter segment">
+            <i class="copyright icon"></i>
+            <p>All Rights Reserved: BZ.COM.2021</p>
+        </div>
+    </div>
+</footer>
